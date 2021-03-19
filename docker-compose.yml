@@ -14,8 +14,8 @@ services:
       - db
     volumes:
       # Comment out the next lines in production
-      - ./web/storage:/srv/pumukit/web/storage:rw,cached
-      - ./web/uploads:/srv/pumukit/web/uploads:rw,cached
+      - /STORAGE/mediavault/storage:/srv/pumukit/web/storage:rw,cached
+      - /STORAGE/mediavault/uploads:/srv/pumukit/web/uploads:rw,cached
       # Comment out the next line for dev
       # - ./:/srv/pumukit
 
@@ -32,9 +32,9 @@ services:
       - php
     volumes:
       # Comment out the next lines in production
-      - ./web/storage:/srv/pumukit/web/storage:ro
-      - ./web/uploads:/srv/pumukit/web/uploads:ro
-      - ./web/bundles:/srv/pumukit/web/bundles:ro
+      - /STORAGE/mediavault/storage:/srv/pumukit/web/storage:ro
+      - /STORAGE/mediavault/uploads:/srv/pumukit/web/uploads:ro
+      - /STORAGE/mediavault/bundles:/srv/pumukit/web/bundles:ro
       # Comment out the next line for dev
       # - ./:/srv/pumukit
     ports:
